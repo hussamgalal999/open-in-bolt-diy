@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Open In Bolt.diy",
+  "version": "1.0",
+  "description": "Modifies links on web pages. to open in bolt.diy instead of bolt.new",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
